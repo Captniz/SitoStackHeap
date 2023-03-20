@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "./src/scripts/",
+    "rootDir": "./src/scripts/",
+    "noEmitOnError": false,
+    "sourceMap": false,
+    "strict": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": false,
+  },
+  "include": ["./src/scripts/*"]
+}
