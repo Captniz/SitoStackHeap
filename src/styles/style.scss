@@ -1,15 +1,57 @@
 $blck: #001219;
-$dblu: #005F73;
-$teal: #0A9396;
-$lblu: #94D2BD;
-$sand: #E9D8A6;
+$dblu: #005f73;
+$teal: #0a9396;
+$lblu: #94d2bd;
+$sand: #e9d8a6;
 
-$yllw: #EE9B00;
-$lorg: #CA6702;
-$dorg: #BB3E03;
-$lred: #AE2012;
-$dred: #9B2226;
+$yllw: #ee9b00;
+$lorg: #ca6702;
+$dorg: #bb3e03;
+$lred: #ae2012;
+$dred: #9b2226;
 
-body {
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Banner {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-color: $sand;
+}
+
+.Buttons {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bigButtons {
+  border-radius: 20px;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  width: 30vw;
+  height: 30vw;
+  background-color: $yllw;
+  color: white;
+  border: 3px solid #9b2226;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: $sand;
     color: $blck;
+  }
 }

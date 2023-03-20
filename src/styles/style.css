@@ -1,3 +1,44 @@
-body {
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Banner {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background-color: #e9d8a6;
+}
+
+.Buttons {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bigButtons {
+  border-radius: 20px;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  width: 30vw;
+  height: 30vw;
+  background-color: #ee9b00;
+  color: white;
+  border: 3px solid #9b2226;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.bigButtons:hover {
+  background-color: #e9d8a6;
   color: #001219;
 }/*# sourceMappingURL=style.css.map */
