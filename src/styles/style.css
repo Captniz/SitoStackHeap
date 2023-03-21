@@ -27,18 +27,21 @@
   margin-right: 7vw;
   width: 30vw;
   height: 30vw;
-  background-color: #ee9b00;
-  color: white;
-  border: 3px solid #9b2226;
+  background-color: #ffffff;
+  color: #001219;
+  border: 2px solid #ca6702;
   font-size: 1.5em;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 10px #ee9b00;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 .bigButtons:hover {
-  background-color: #e9d8a6;
-  color: #001219;
+  box-shadow: 0px 0px #ee9b00;
+  border: 3px solid #ca6702;
+  background-color: #ca6702;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

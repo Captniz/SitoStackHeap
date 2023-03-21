@@ -1,4 +1,5 @@
 $blck: #001219;
+$whte: #ffffff;
 $dblu: #005f73;
 $teal: #0a9396;
 $lblu: #94d2bd;
@@ -39,19 +40,21 @@ $dred: #9b2226;
   margin-right: 7vw;
   width: 30vw;
   height: 30vw;
-  background-color: $yllw;
-  color: white;
-  border: 3px solid #9b2226;
+  background-color: $whte;
+  color: $blck;
+  border: 2px solid $lorg;
   font-size: 1.5em;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  box-shadow: 0px 10px $yllw;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease; //! no TODO
   &:hover {
-    background-color: $sand;
-    color: $blck;
+    box-shadow: 0px 0px $yllw;
+    border: 3px solid $lorg;
+    background-color: $lorg;
+    color: $whte;
   }
 }
