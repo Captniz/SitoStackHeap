@@ -93,22 +93,22 @@ html {
   height: 30vw;
   background-image: linear-gradient(180deg, #ae2012, #ca6702, #ee9b00, #ffffff);
   color: #ffffff;
-  border: 0px solid #ebebeb;
+  border: 0.15em solid #22313b;
   font-size: 2vw;
   font-weight: bold;
-  box-shadow: 0px 0.4em #a8a8a8;
+  box-shadow: 0px 0.4em #010b14;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .bigButtons:hover {
-  background-image: none;
-  background-color: #ffffff;
   box-shadow: 0px 0.4em #ee9b00;
   color: #010b14;
+  border: 0.15em solid #010b14;
   border-radius: 20px;
-  border: 0.15em solid transparent;
-  -o-border-image: linear-gradient(180deg, #ae2012, #ca6702, #ee9b00) 1;
-     border-image: linear-gradient(180deg, #ae2012, #ca6702, #ee9b00) 1;
+  border: 0.15em double transparent;
+  background-image: linear-gradient(white, white), linear-gradient(180deg, #ae2012, #ca6702, #ee9b00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 .bigButtons .upper {
