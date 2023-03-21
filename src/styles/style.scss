@@ -127,6 +127,7 @@ html {
       linear-gradient(180deg, $lred, $lorg, $yllw);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    //TODO: magari la transizione del bordo potreebbe non provocare la morte
   }
 }
 
