@@ -1,5 +1,7 @@
-$blck: #001219;
+$blck: #010b14;
 $whte: #ffffff;
+$grey: #ebebeb;
+$dgre: #a8a8a8;
 $dblu: #005f73;
 $teal: #0a9396;
 $lblu: #94d2bd;
@@ -11,16 +13,74 @@ $dorg: #bb3e03;
 $lred: #ae2012;
 $dred: #9b2226;
 
+@font-face {
+  font-family: "Martian";
+  src: url("../fonts/Martian_Mono/MartianMono-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Chivo";
+  src: url("../fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
+}
+
 * {
   margin: 0px;
   padding: 0px;
+}
+
+//TODO: CAVA STA ROBA
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .Banner {
   width: 100%;
   max-width: 100%;
   height: 100vh;
-  background-color: $sand;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Title {
+  font-family: "Martian";
+  font-weight: bold;
+  color: $blck;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  font-size: 8vw;
+  background: linear-gradient(180deg, $lred, $lorg, $yllw, $whte);
+  border-right: 2px solid #01152b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.Subtitle {
+  height: 100%;
+  font-family: "Martian";
+  font-size: 8vh;
+  color: $blck;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  padding-left: 5vw;
 }
 
 .Buttons {
@@ -40,21 +100,53 @@ $dred: #9b2226;
   margin-right: 7vw;
   width: 30vw;
   height: 30vw;
-  background-color: $whte;
-  color: $blck;
-  border: 2px solid $lorg;
-  font-size: 1.5em;
+  background-color: $yllw;
+  color: $whte;
+  border: 0px solid $grey;
+  font-size: 2vw;
   font-weight: bold;
+  box-shadow: 0px 8px $dgre;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0px 8px $yllw;
+    border: 3px solid $yllw;
+    background-color: $whte;
+    color: $blck;
+  }
+}
+
+.bigButtons .upper {
+  height: 70%;
+  width: 100%;
   display: flex;
+  color: inherit;
+  background-color: inherit;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 10px $yllw;
-  cursor: pointer;
-  transition: all 0.5s ease; //! no TODO
-  &:hover {
-    box-shadow: 0px 0px $yllw;
-    border: 3px solid $lorg;
-    background-color: $lorg;
-    color: $whte;
-  }
+}
+
+.bigButtons .lower {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  font-family: "Chivo";
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background-color: $grey;
+  justify-content: center;
+  align-items: center;
+  color: $blck;
+}
+
+.Button i {
+  font-size: 100vw;
+}
+
+//TODO: aumenmta sto font
+.Subtitle div i {
+  font-size: 8vh;
+  width: 1px;
 }
