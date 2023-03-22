@@ -208,6 +208,7 @@ html {
   border-left: 0.13em solid;
   -o-border-image: linear-gradient(180deg, #010b14, #010b14, #010b14, #ffffff) 1;
      border-image: linear-gradient(180deg, #010b14, #010b14, #010b14, #ffffff) 1;
+  text-align: justify;
 }
 
 .MiniTitle {
@@ -230,7 +231,6 @@ html {
   -o-border-image: linear-gradient(90deg, #ae2012, #ca6702, #ee9b00) 1;
      border-image: linear-gradient(90deg, #ae2012, #ca6702, #ee9b00) 1;
   text-decoration: none;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #efefef, rgba(0, 0, 0, 0));
 }
 
 .hightlight1 {

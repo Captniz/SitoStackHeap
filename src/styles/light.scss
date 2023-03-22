@@ -226,6 +226,7 @@ html {
   padding-left: 5vw;
   border-left: 0.13em solid;
   border-image: linear-gradient(180deg, $blck, $blck, $blck, $whte) 1;
+  text-align: justify;
 }
 
 .MiniTitle {
@@ -247,12 +248,7 @@ html {
   border-bottom: 0.1em solid;
   border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
   text-decoration: none;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0),
-    $dwht,
-    rgba(0, 0, 0, 0)
-  );
+  
 }
 
 .hightlight1 {
