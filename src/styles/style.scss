@@ -1,6 +1,7 @@
 $blck: #010b14;
 $lblc: #22313b;
 $whte: #ffffff;
+$dwht: #efefef;
 $grey: #ebebeb;
 $dgre: #a8a8a8;
 $dblu: #005f73;
@@ -210,4 +211,5 @@ html {
 .hightlight{
   border-bottom: 0.1em solid;
   border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0), $dwht, rgba(0,0,0,0));  
 }
