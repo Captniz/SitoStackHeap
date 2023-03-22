@@ -64,7 +64,7 @@ html {
 .Subtitle {
   height: 100%;
   font-family: "Martian";
-  font-size: 8vh;
+  font-size: 4vw;
   color: #010b14;
   display: flex;
   flex-direction: column;
@@ -81,6 +81,8 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20vh;
+  padding-top: 15vh;
 }
 
 .bigButtons {
@@ -98,7 +100,7 @@ html {
   font-weight: bold;
   box-shadow: 0px 0.4em #010b14;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
 }
 .bigButtons:hover {
   box-shadow: 0px 0.4em #ee9b00;
@@ -141,6 +143,54 @@ html {
 }
 
 .Subtitle div i {
-  font-size: 8vh;
+  font-size: 5vw;
   width: 1px;
+}
+
+.Description {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #010b14;
+  font-family: "Chivo";
+  font-size: 2vw;
+  padding-top: 5vh;
+  padding-bottom: 50vh;
+}
+
+.Txt-container {
+  font-family: "Chivo";
+  width: 80vw;
+  height: 100%;
+  align-items: start;
+  overflow-wrap: break-word;
+  padding-left: 5vw;
+  border-left: 0.13em solid;
+  -o-border-image: linear-gradient(180deg, #010b14, #010b14, #010b14, #ffffff) 1;
+     border-image: linear-gradient(180deg, #010b14, #010b14, #010b14, #ffffff) 1;
+}
+
+.MiniTitle {
+  font-family: "Martian";
+  font-size: 3vw;
+  margin-bottom: 2vh;
+}
+
+.Footer {
+  font-family: "Ubuntu";
+  background-color: #010b14;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  height: 15vh;
+}
+
+.hightlight {
+  border-bottom: 0.1em solid;
+  -o-border-image: linear-gradient(90deg, #ae2012, #ca6702, #ee9b00) 1;
+     border-image: linear-gradient(90deg, #ae2012, #ca6702, #ee9b00) 1;
 }/*# sourceMappingURL=style.css.map */

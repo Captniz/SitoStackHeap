@@ -40,7 +40,6 @@ html {
   scrollbar-width: none; /* Firefox */
 }
 
-//TODO: CAVA STA ROBA
 .body::-webkit-scrollbar {
   display: none;
 }
@@ -82,7 +81,7 @@ html {
 .Subtitle {
   height: 100%;
   font-family: "Martian";
-  font-size: 8vh;
+  font-size: 4vw;
   color: $blck;
   display: flex;
   flex-direction: column;
@@ -99,6 +98,8 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20vh;
+  padding-top: 15vh;
 }
 
 .bigButtons {
@@ -116,7 +117,7 @@ html {
   font-weight: bold;
   box-shadow: 0px 0.4em $blck;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
   &:hover {
     box-shadow: 0px 0.4em $yllw;
     color: $blck;
@@ -127,7 +128,7 @@ html {
       linear-gradient(180deg, $lred, $lorg, $yllw);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    //TODO: magari la transizione del bordo potreebbe non provocare la morte
+    //TODO: scroll icon come casari
   }
 }
 
@@ -161,6 +162,52 @@ html {
 }
 
 .Subtitle div i {
-  font-size: 8vh;
+  font-size: 5vw;
   width: 1px;
+}
+
+.Description{
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $whte;
+  color: $blck;
+  font-family: "Chivo";
+  font-size: 2vw;
+  padding-top: 5vh;
+  padding-bottom: 50vh;
+}
+
+.Txt-container {
+  font-family: 'Chivo';
+  width: 80vw;
+  height: 100%;
+  align-items: start;
+  overflow-wrap: break-word; 
+  padding-left: 5vw;
+  border-left: 0.13em solid;
+  border-image: linear-gradient(180deg, $blck, $blck, $blck, $whte) 1;
+}
+
+.MiniTitle{
+  font-family: "Martian";
+  font-size: 3vw;
+  margin-bottom: 2vh;
+}
+
+.Footer{
+  font-family: 'Ubuntu';
+  background-color: $blck;
+  color: $whte;
+  width: 100%;
+  max-width: 100%;
+  height: 15vh;
+}
+
+.hightlight{
+  border-bottom: 0.1em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
 }
