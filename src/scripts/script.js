@@ -1,6 +1,5 @@
 var activeTheme = "light";
 
-//TODO: RIFALLO PER LE LALTRE DUE PAGINE E ATTENTO A I LINK E CHE RESTI SEMPRE QUELLo
 function changeTheme() {
   if (activeTheme == "light") {
     activeTheme = "dark";
@@ -18,5 +17,3 @@ function changeThemeSec() {
   }
   $("#csslink").prop("href", "../styles/" + activeTheme + ".css");
 }
-
-//TODO DOWNLOAD BUTTON FOR MD FILE
