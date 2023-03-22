@@ -2,6 +2,7 @@ var activeTheme = "light";
 
 //TODO: RIFALLO PER LE LALTRE DUE PAGINE E ATTENTO A I LINK E CHE RESTI SEMPRE QUELLo
 function changeTheme() {
+  alert("ciao");
   if (activeTheme == "light") {
     activeTheme = "dark";
   } else {
@@ -9,3 +10,14 @@ function changeTheme() {
   }
   $("#csslink").prop("href", "./src/styles/" + activeTheme + ".css");
 }
+
+function changeThemeSec() {
+  if (activeTheme == "light") {
+    activeTheme = "dark";
+  } else {
+    activeTheme = "light";
+  }
+  $("#csslink").prop("href", "../styles/"+ activeTheme + ".css");
+}
+
+//TODO DOWNLOAD BUTTON FOR MD FILE

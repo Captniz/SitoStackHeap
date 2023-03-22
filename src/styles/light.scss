@@ -216,6 +216,7 @@ html {
   padding-top: 5vh;
   padding-bottom: 50vh;
 }
+//TODO FAI DARK CSS
 
 .Txt-container {
   font-family: "Chivo";
@@ -235,6 +236,12 @@ html {
   margin-bottom: 2vh;
 }
 
+.nome {
+  font-size: 2vw;
+  text-decoration: underline;
+  margin-bottom: 2vh;
+}
+
 .Footer {
   font-family: "Ubuntu";
   background-color: $blck;
@@ -242,13 +249,17 @@ html {
   width: 100%;
   max-width: 100%;
   height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hightlight {
+  font-weight: bold;
   border-bottom: 0.1em solid;
   border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
   text-decoration: none;
-  
 }
 
 .hightlight1 {
@@ -357,38 +368,63 @@ html {
   overflow-wrap: break-word;
   font-size: 1em;
   font-family: "Martian";
+  text-align: justify;
+  line-height: 4vh;
 }
 
 h6 {
   //main title
   font-family: "Martian";
-  font-size: 3em;
+  font-size: 2em;
+  margin-bottom: 3vh;
+  margin-top: 8vh;
 }
 
 h5 {
   //main summary arg
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-bottom: 1vh;
 }
 
 h4 {
-  //special?
+  font-family: "Martian";
+  font-size: 1.5em;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
 }
 
-ul {
+//TODO FAI DARK CSS
+//TODO code blocks
+//TODO metti citazioni
+//TODO DAI SOTTOTTITOLI DECENTI
+//TODO navbar laterlae fa qualcosa
+
+.contentSummary ul {
   //subargs
   margin-left: 0.5vw;
   list-style-type: none;
   padding-left: 0;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
 }
 
-li {
+ul li {
   //subargs
   margin-bottom: 0.5vh;
+  font-size: 1vw;
   padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 2vh;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.actualLink {
+  text-decoration: underline;
+  color: $yllw;
 }

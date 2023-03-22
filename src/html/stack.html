@@ -10,13 +10,191 @@
       type="image/icon type"
     />
     <!--CSS-->
-    <link rel="stylesheet" href="../styles/style.css" type="text/css" />
+    <link
+      id="csslink"
+      rel="stylesheet"
+      href="../styles/light.css"
+      type="text/css"
+    />
     <link
       href="../fonts/fontawesome-free-6.3.0-web/css/all.css"
       rel="stylesheet"
     />
     <!--SCRIPTS (JQuery, Script, ...)-->
-    <script src="myscripts.js"></script>
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/script.js"></script>
   </head>
-  <body class="body"></body>
+  <body class="body2">
+    <div class="ChThemeContainer">
+      <div class="ChTheme" onclick="changeThemeSec()">
+        <i class="fa-regular fa-lightbulb"></i>
+      </div>
+    </div>
+    <div class="navBundle">
+      <div class="navbar">
+        <a href="./stack.html">
+          <div class="Link"><span class="hightlight1">STACK</span></div>
+        </a>
+        <a href="../../index.html">
+          <div class="Link"><span class="hightlight1">HOME</span></div>
+        </a>
+        <a href="./heap.html">
+          <div class="Link"><span class="hightlight1">HEAP</span>&nbsp;</div>
+        </a>
+      </div>
+      <div class="contentNavbar">STACK</div>
+    </div>
+    <div class="actualContent">
+      <div class="contentSummary">
+        <h5>Description</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> What and how</li>
+        </ul>
+        <h5>Example</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Code</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Error</li>
+        </ul>
+      </div>
+      <div class="textContent">
+        <h6>DESCRIPTION</h6>
+        <h4>WHAT AND HOW</h4>
+        Stack Memory is the
+        <span class="hightlight">Static Memory Allocation Scheme</span> where
+        all the function calls, primitive data values specific to a method and
+        references to the objects in the heap memory are stored.
+        <br />
+        <br />
+        Compared to heap,
+        <span class="hightlight"
+          >stack is only used for the execution of a single thread versus being
+          globally accessible and shared with all threads</span
+        >.
+        <br />
+        <br />
+        Stack memory uses a
+        <span class="hightlight">LIFO (last-in first-out) structure</span> with
+        each stack containing method specific values. When the method ends, the
+        block becomes erased and is available for the next method.
+        <span class="hightlight"
+          >The values in the stack exist for as long as the function that
+          created them is in execution.</span
+        >
+        <br />
+        <br />
+        <span class="hightlight">The size of the stack memory is fixed</span>
+        and cannot grow or shrink once created.
+
+        <h6>EXAMPLE</h6>
+        <h4>CODE</h4>
+        <div class="code">
+          public class Main { public static int addOne(int input) { return input
+          + 1; } public static int addTwo(int input) { return input + 2; }
+          public static void main(String[] args) { int x = 0; x = addOne(x); x =
+          addTwo(x); } }
+        </div>
+        <br />
+        <br />
+        <ol>
+          <li>
+            When the program is executed, the main method is executed first by
+            the JVM. When the main method is called, a block is allocated for it
+            in the call stack.
+          </li>
+          <li>
+            The main method contains one primitive value x. This primitive value
+            is stored in the memory block allocated for the main method.
+          </li>
+          <li>
+            When the addOne method is called from the main method, a new block
+            for addOne method is allocated in the stack memory.
+          </li>
+          <li>
+            The variables specific to the method are created and stored in the
+            allocated memory block. Upon the completion of the execution of the
+            method, the value is returned to the calling method(here it is the
+            main method), and the block is removed from the call stack.
+          </li>
+          <li>
+            Similarly, when the addTwo method is called, a new block is
+            allocated for it, and the variables are created and stored. When the
+            method finishes execution, the value is returned to the calling
+            method, and the block is cleared.
+          </li>
+          <li>
+            Finally, the main method completes its execution, and the memory
+            block corresponding to main method is cleared from the stack.
+          </li>
+        </ol>
+        <br />
+        <br />
+        <h4>ERROR</h4>
+        As mentioned earlier, stack memory is limited in size and cannot be
+        enlarged or shrunk once created. Therefore, if we use all of the stack
+        memory, there will be no space left for upcoming method calls, and we
+        will get the <span class="hightlight">StackOverflowError</span>.
+        <br />
+        <br />
+        <h6>SUMMARY</h6>
+        <h4>TABLE</h4>
+        <table>
+          <tr>
+            <td>Property</td>
+            <td>Stack</td>
+            <td>Heap</td>
+          </tr>
+          <tr>
+            <td>Size</td>
+            <td>Smaller</td>
+            <td>Bigger</td>
+          </tr>
+          <tr>
+            <td>Order</td>
+            <td>LIFO</td>
+            <td>No order</td>
+          </tr>
+          <tr>
+            <td>Speed</td>
+            <td>Faster (LIFO)</td>
+            <td>Slower</td>
+          </tr>
+          <tr>
+            <td>Resizing</td>
+            <td>NOT Allowed</td>
+            <td>Allowed</td>
+          </tr>
+          <tr>
+            <td>Allocation</td>
+            <td>Relative to methods</td>
+            <td>Garbage collector</td>
+          </tr>
+          <tr>
+            <td>Storage</td>
+            <td>Method values, object references</td>
+            <td>Objects and classes</td>
+          </tr>
+          <tr>
+            <td>Exception</td>
+            <td>StackOverflowError</td>
+            <td>OutOfMemoryError</td>
+          </tr>
+          <tr>
+            <td>Thread</td>
+            <td>New stack for every thread</td>
+            <td>Shared between threads</td>
+          </tr>
+          <tr>
+            <td>Scope</td>
+            <td>Thread specific</td>
+            <td>Accessible by anyone</td>
+          </tr>
+          <tr>
+            <td>Lifetime</td>
+            <td>Short</td>
+            <td>From start to end</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
 </html>
