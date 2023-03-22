@@ -17,10 +17,15 @@
       type="text/css"
     />
     <link
+      href="../scripts/highlight/styles/github-dark.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="../fonts/fontawesome-free-6.3.0-web/css/all.css"
       rel="stylesheet"
     />
     <!--SCRIPTS (JQuery, Script, ...)-->
+    <script src="../scripts/highlight/highlight.min.js"></script>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/script.js"></script>
   </head>
@@ -46,18 +51,259 @@
     </div>
     <div class="actualContent">
       <div class="contentSummary">
-        <h5>a</h5>
+        <h5>Description</h5>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> a</li>
-          <li><i class="fa-solid fa-chevron-right"></i> a</li>
-          <li><i class="fa-solid fa-chevron-right"></i> a</li>
-          <li><i class="fa-solid fa-chevron-right"></i> a</li>
-          <li><i class="fa-solid fa-chevron-right"></i> a</li>
+          <li><i class="fa-solid fa-chevron-right"></i> What and how</li>
+        </ul>
+        <h5>Size</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Large size</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Small size</li>
+        </ul>
+        <h5>Composition</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Description</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Eden</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Survivors</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Old generation</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Permanent generation</li>
+        </ul>
+        <h5>Example</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Code</li>
+          <li><i class="fa-solid fa-chevron-right"></i> Error</li>
+        </ul>
+        <h5>Summary</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Table</li>
+        </ul>
+        <h5>Sources</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> links</li>
         </ul>
       </div>
       <div class="textContent">
         <h6>DESCRIPTION</h6>
+        <h4>WHAT AND HOW</h4>
+
+        The <span class="hightlight">Java heap</span> is the area of memory used
+        to store dynamic objects instantiated by applications running on the
+        JVM.
+        <br />
+        <br />
+        When the JVM is started, heap memory is created and any
+        <span class="hightlight">
+          objects in the heap can be shared between threads</span
+        >
+        as long as the application is running.
+        <br />
+        <br />
+        <span class="hightlight"
+          >Heap does not follow any order and dynamically manages memory
+          blocks.</span
+        >
+        <h6>SIZE</h6>
+        <h4>LARGE SIZE</h4>
+        A larger Java memory heap:
+        <br />
+        <br />
+        <ol>
+          <li>
+            Does not require working data to be divided across multiple JVM
+            instances
+          </li>
+          <li>Allows more objects to be created</li>
+          <li>Takes longer to fill</li>
+          <li>
+            Allows the application to run longer between garbage collection (GC)
+            events, but they are slower
+          </li>
+        </ol>
+        <br />
+        <h4>SMALL SIZE</h4>
+        A smaller Java memory heap:
+        <br />
+        <br />
+        <ol>
+          <li>Holds fewer objects</li>
+          <li>Fills more quickly</li>
+          <li>
+            Is garbage collected more frequently (but the pauses are shorter)
+          </li>
+          <li>May lead to out-of-memory errors</li>
+        </ol>
+        <h6>COMPOSITION</h6>
+        <h4>DESCRIPTION</h4>
+        The heap memory can be divided into three parts:
+        <br />
+        <br />
+        <ol>
+          <li>New or Young Generation</li>
+          <li>Old or Tenured Generation</li>
+          <li>Permanent Generation</li>
+        </ol>
+        <br />
+        Young generation is the memory space where all the newly created objects
+        are allocated. New generation in turn has 3 parts:
+        <br />
+        <br />
+        <ol>
+          <li>Eden</li>
+          <li>Survivor1</li>
+          <li>Survivor2</li>
+        </ol>
+        <br />
+        <h4>EDEN</h4>
+        <span class="hightlight"
+          >All the newly created objects are allocated in Eden space</span
+        >. When the Eden is full, a minor garbage collection happens, and the
+        live objects are moved to Survivor1 and then to Survivor2.
+        <br />
+        <br />
+        <h4>SURVIVORS</h4>
+        <span class="hightlight"
+          >The Survivor1 and Survivor2 contains objects that survived the minor
+          garbage collection</span
+        >. Objects that survive Eden, Survivor1 and Survivor2 are moved to Old
+        generation. In Old generation the garbage is collected less frequently,
+        so Survivor1 and Survivor2 spaces are used to make sure that only long
+        survived objects are moved to tenured generation.
+        <br />
+        <br />
+        <h4>OLD GENERATION</h4>
+        Age is set for the objects allocated in young generation.
+        <span class="hightlight"
+          >When that age is met, those live objects are moved to the old
+          generation</span
+        >. Generally, long-surviving objects are stored in the old generation. A
+        major garbage collection runs on the old generation to collect dead
+        objects.
+        <br />
+        <br />
+        <h4>PERMANENT GENERATION</h4>
+        <span class="hightlight"
+          >All the newly created objects are allocated in Eden space</span
+        >. When the Eden is full, a minor garbage collection happens, and the
+        live objects are moved to Survivor1 and then to Survivor2.
+        <h6>EXAMPLE</h6>
+        <h4>CODE</h4>
+        <pre class="code">
+          <code class="language-java">
+          import java.util.ArrayList;
+          import java.util.List;
+
+          public class HeapMemory {
+
+            public static void main(String[] args) {
+              int x = 10;
+
+              List<Integer> list = new ArrayList<>();
+              list.add(1);
+              list.add(2);
+              list.add(3);
+            }
+          }
+        </code>
+        </pre>
+        <br />
+        <br />
+        In the above example, the variable x is allocated in the stack, whereas the object list is allocated memory in the heap. Only the reference to the list object is stored in the stack memory alongside x.
+        <br />
+        <br />
+        <h4>ERROR</h4>
+        <span class="hightlight">OutOfMemoryError</span> is thrown when there is no more space left in the heap to create and store a new object. This happens when the Garbage Collector could not freeup any space to store new objects.
+        <h6>SUMMARY</h6>
+        <h4>TABLE</h4>
+        <table>
+          <tr class="legenda">
+            <td >Property</td>
+            <td >Stack</td>
+            <td >Heap</td>
+          </tr>
+          <tr>
+            <td class="subcat">Size</td>
+            <td>Smaller</td>
+            <td>Bigger</td>
+          </tr>
+          <tr>
+            <td class="subcat">Order</td>
+            <td>LIFO</td>
+            <td>No order</td>
+          </tr>
+          <tr>
+            <td class="subcat">Speed</td>
+            <td>Faster (LIFO)</td>
+            <td>Slower</td>
+          </tr>
+          <tr>
+            <td class="subcat">Resizing</td>
+            <td>NOT Allowed</td>
+            <td>Allowed</td>
+          </tr>
+          <tr>
+            <td class="subcat">Allocation</td>
+            <td>Relative to methods</td>
+            <td>Garbage collector</td>
+          </tr>
+          <tr>
+            <td class="subcat">Storage</td>
+            <td>Method values, object references</td>
+            <td>Objects and classes</td>
+          </tr>
+          <tr>
+            <td class="subcat">Exception</td>
+            <td>StackOverflowError</td>
+            <td>OutOfMemoryError</td>
+          </tr>
+          <tr>
+            <td class="subcat">Thread</td>
+            <td>New stack for every thread</td>
+            <td>Shared between threads</td>
+          </tr>
+          <tr>
+            <td class="subcat">Scope</td>
+            <td>Thread specific</td>
+            <td>Accessible by anyone</td>
+          </tr>
+          <tr>
+            <td class="subcat">Lifetime</td>
+            <td>Short</td>
+            <td>From start to end</td>
+          </tr>
+        </table>
+        <h6>SOURCES</h6>
+        <h4>LINKS</h4>
+
+        <a
+          href="https://www.azul.com/blog/what-is-java-heap-size/"
+          class="actualLink"
+          >Azul.com</a
+        >
+        <br />
+        <a
+          href="https://www.scaler.com/topics/java/heap-memory-and-stack-memory-in-java/"
+          class="actualLink"
+          >Scaler.com</a
+        >
+        <br />
+        <a
+          href="https://www.javatpoint.com/stack-vs-heap-java"
+          class="actualLink"
+          >Javapoint.com 1</a
+        >
+        <br />
+        <a
+          href="https://www.javatpoint.com/memory-management-in-java"
+          class="actualLink"
+          >Javapoint.com 2</a
+        >
+        <!--end-->
+        <br />
+        <br />
       </div>
     </div>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

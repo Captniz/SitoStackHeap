@@ -366,10 +366,10 @@ html {
   padding-right: 25vw;
   width: 45vw;
   overflow-wrap: break-word;
-  font-size: 1em;
+  font-size: 1.2vw; //1em;
   font-family: "Martian";
   text-align: justify;
-  line-height: 4vh;
+  line-height: 2em;
 }
 
 h6 {
@@ -394,10 +394,46 @@ h4 {
 }
 
 //TODO FAI DARK CSS
-//TODO code blocks
-//TODO metti citazioni
-//TODO DAI SOTTOTTITOLI DECENTI
 //TODO navbar laterlae fa qualcosa
+//TODO return to home dalla navbar laterrale
+
+.code {
+  color: inherit;
+  background-color: inherit;
+  font-family: "Ubuntu";
+  padding-top: 1em;
+  background-color: $whte;
+  color: $whte;
+}
+
+table {
+  border-left: solid 0.2em;
+  border-right: solid 0.2em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-collapse: collapse;
+  border-top: solid 0.2em;
+  text-align: center;
+}
+
+tr {
+  padding-bottom: 100em;
+  border-bottom: solid 0.2em;
+}
+td {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-right: solid 0.2em;
+}
+
+.legenda {
+  color: $lorg;
+}
+.subcat {
+  color: $yllw;
+}
 
 .contentSummary ul {
   //subargs
@@ -417,6 +453,11 @@ ul li {
 
 ol li {
   margin-bottom: 2vh;
+}
+ol {
+  border-right: 0.25em solid;
+  border-image: linear-gradient(180deg, $lred, $lorg, $yllw) 1;
+  padding-right: 3vw;
 }
 
 a {

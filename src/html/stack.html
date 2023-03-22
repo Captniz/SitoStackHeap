@@ -20,7 +20,12 @@
       href="../fonts/fontawesome-free-6.3.0-web/css/all.css"
       rel="stylesheet"
     />
+    <link
+      href="../scripts/highlight/styles/github-dark.min.css"
+      rel="stylesheet"
+    />
     <!--SCRIPTS (JQuery, Script, ...)-->
+    <script src="../scripts/highlight/highlight.min.js"></script>
     <script src="../scripts/jquery.js"></script>
     <script src="../scripts/script.js"></script>
   </head>
@@ -55,6 +60,14 @@
           <li><i class="fa-solid fa-chevron-right"></i> Code</li>
           <li><i class="fa-solid fa-chevron-right"></i> Error</li>
         </ul>
+        <h5>Summary</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Table</li>
+        </ul>
+        <h5>Sources</h5>
+        <ul>
+          <li><i class="fa-solid fa-chevron-right"></i> Links</li>
+        </ul>
       </div>
       <div class="textContent">
         <h6>DESCRIPTION</h6>
@@ -87,12 +100,26 @@
 
         <h6>EXAMPLE</h6>
         <h4>CODE</h4>
-        <div class="code">
-          public class Main { public static int addOne(int input) { return input
-          + 1; } public static int addTwo(int input) { return input + 2; }
-          public static void main(String[] args) { int x = 0; x = addOne(x); x =
-          addTwo(x); } }
-        </div>
+        <pre class="code">
+          <code class="language-java">
+          public class Main {
+            public static int addOne(int input) {
+              return input + 1;
+            }
+          
+            public static int addTwo(int input) {
+              return input + 2;
+            }
+          
+            public static void main(String[] args) {
+              int x = 0;
+          
+              x = addOne(x);
+              x = addTwo(x);
+            }
+          }
+        </code>
+        </pre>
         <br />
         <br />
         <ol>
@@ -127,74 +154,103 @@
           </li>
         </ol>
         <br />
-        <br />
         <h4>ERROR</h4>
         As mentioned earlier, stack memory is limited in size and cannot be
         enlarged or shrunk once created. Therefore, if we use all of the stack
         memory, there will be no space left for upcoming method calls, and we
         will get the <span class="hightlight">StackOverflowError</span>.
-        <br />
-        <br />
         <h6>SUMMARY</h6>
         <h4>TABLE</h4>
         <table>
-          <tr>
+          <tr class="legenda">
             <td>Property</td>
             <td>Stack</td>
             <td>Heap</td>
           </tr>
           <tr>
-            <td>Size</td>
+            <td class="subcat">Size</td>
             <td>Smaller</td>
             <td>Bigger</td>
           </tr>
           <tr>
-            <td>Order</td>
+            <td class="subcat">Order</td>
             <td>LIFO</td>
             <td>No order</td>
           </tr>
           <tr>
-            <td>Speed</td>
+            <td class="subcat">Speed</td>
             <td>Faster (LIFO)</td>
             <td>Slower</td>
           </tr>
           <tr>
-            <td>Resizing</td>
+            <td class="subcat">Resizing</td>
             <td>NOT Allowed</td>
             <td>Allowed</td>
           </tr>
           <tr>
-            <td>Allocation</td>
+            <td class="subcat">Allocation</td>
             <td>Relative to methods</td>
             <td>Garbage collector</td>
           </tr>
           <tr>
-            <td>Storage</td>
+            <td class="subcat">Storage</td>
             <td>Method values, object references</td>
             <td>Objects and classes</td>
           </tr>
           <tr>
-            <td>Exception</td>
+            <td class="subcat">Exception</td>
             <td>StackOverflowError</td>
             <td>OutOfMemoryError</td>
           </tr>
           <tr>
-            <td>Thread</td>
+            <td class="subcat">Thread</td>
             <td>New stack for every thread</td>
             <td>Shared between threads</td>
           </tr>
           <tr>
-            <td>Scope</td>
+            <td class="subcat">Scope</td>
             <td>Thread specific</td>
             <td>Accessible by anyone</td>
           </tr>
           <tr>
-            <td>Lifetime</td>
+            <td class="subcat">Lifetime</td>
             <td>Short</td>
             <td>From start to end</td>
           </tr>
         </table>
+        <h6>SOURCES</h6>
+        <h4>LINKS</h4>
+
+        <a
+          href="https://www.azul.com/blog/what-is-java-heap-size/"
+          class="actualLink"
+          >Azul.com</a
+        >
+        <br />
+        <a
+          href="https://www.scaler.com/topics/java/heap-memory-and-stack-memory-in-java/"
+          class="actualLink"
+          >Scaler.com</a
+        >
+        <br />
+        <a
+          href="https://www.javatpoint.com/stack-vs-heap-java"
+          class="actualLink"
+          >Javapoint.com 1</a
+        >
+        <br />
+        <a
+          href="https://www.javatpoint.com/memory-management-in-java"
+          class="actualLink"
+          >Javapoint.com 2</a
+        >
+        <!--end-->
+        <br />
+        <br />
       </div>
     </div>
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
