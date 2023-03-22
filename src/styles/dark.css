@@ -1,1 +1,470 @@
-/*# sourceMappingURL=dark.css.map */
+/* $blck: #010b14;
+$lblc: #22313b;
+$whte: #ffffff;
+$dwht: #efefef;
+$grey: #ebebeb;
+$dgre: #a8a8a8;
+$dblu: #005f73;
+$teal: #0a9396;
+$lblu: #94d2bd;
+$sand: #e9d8a6;
+
+$yllw: #ee9b00;
+$lorg: #ca6702;
+$dorg: #bb3e03;
+$lred: #ae2012;
+$dred: #9b2226; */
+@font-face {
+  font-family: "Martian";
+  src: url("../fonts/Martian_Mono/MartianMono-VariableFont_wdth,wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chivo";
+  src: url("../fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.body {
+  background-color: #22313b;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.body2::-webkit-scrollbar {
+  display: none;
+}
+
+.body2 {
+  background-color: #22313b;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.Banner {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChThemeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.ChTheme { /* Safari */
+  position: sticky;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  color: #22313b;
+  width: 5vw;
+  height: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+}
+
+.ChTheme i {
+  font-size: 2vw;
+  padding-left: 10px;
+}
+
+.Title {
+  font-family: "Martian";
+  font-weight: bold;
+  color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  font-size: 8vw;
+  background: linear-gradient(180deg, #005f73, #0a9396, #94d2bd, #22313b);
+  border-right: 0.04em solid;
+  -o-border-image: linear-gradient(180deg, #ffffff, #ffffff, #ffffff, #22313b) 1;
+     border-image: linear-gradient(180deg, #ffffff, #ffffff, #ffffff, #22313b) 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.Subtitle {
+  height: 100%;
+  font-family: "Martian";
+  font-size: 4vw;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  padding-left: 5vw;
+}
+
+.Buttons {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20vh;
+  padding-top: 15vh;
+}
+
+.bigButtons {
+  border-radius: 20px;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  width: 30vw;
+  height: 30vw;
+  background-image: linear-gradient(180deg, #005f73, #0a9396, #94d2bd, #22313b);
+  color: #ffffff;
+  border: 0.15em solid #ebebeb;
+  font-size: 2vw;
+  font-weight: bold;
+  box-shadow: 0px 0.4em #a8a8a8;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.bigButtons:hover {
+  box-shadow: 0px 0.4em #94d2bd;
+  color: #010b14;
+  border: 0.15em solid #010b14;
+  border-radius: 20px;
+  border: 0.15em double transparent;
+  background-image: linear-gradient(white, white), linear-gradient(180deg, #005f73, #0a9396, #94d2bd);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.bigButtons .upper {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  color: inherit;
+  background-color: inherit;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigButtons .lower {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  font-family: "Chivo";
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background-color: #ebebeb;
+  justify-content: center;
+  align-items: center;
+  color: #010b14;
+}
+
+.bigButtons div i {
+  font-size: 10vw;
+}
+
+.Subtitle div i {
+  font-size: 5vw;
+  width: 1px;
+}
+
+.Description {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #22313b;
+  color: #ffffff;
+  font-family: "Chivo";
+  font-size: 2vw;
+  padding-top: 5vh;
+  padding-bottom: 50vh;
+}
+
+.Txt-container {
+  font-family: "Chivo";
+  width: 80vw;
+  height: 100%;
+  align-items: start;
+  overflow-wrap: break-word;
+  padding-left: 5vw;
+  border-left: 0.13em solid;
+  -o-border-image: linear-gradient(180deg, #ffffff, #ffffff, #ffffff, #22313b) 1;
+     border-image: linear-gradient(180deg, #ffffff, #ffffff, #ffffff, #22313b) 1;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.MiniTitle {
+  font-family: "Martian";
+  font-size: 3vw;
+  margin-bottom: 2vh;
+}
+
+.nome {
+  font-size: 2vw;
+  text-decoration: underline;
+  margin-bottom: 2vh;
+}
+
+.Footer {
+  font-family: "Ubuntu";
+  background-color: #010b14;
+  color: #a8a8a8;
+  width: 100%;
+  max-width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hightlight {
+  font-weight: bold;
+  border-bottom: 0.1em solid;
+  -o-border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+  text-decoration: none;
+}
+
+.hightlight1 {
+  border-bottom: 0.11em solid;
+  -o-border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+  transition: all 0.05s ease;
+  text-decoration: none;
+}
+.hightlight1:hover {
+  border-bottom: 0.11em solid;
+  -o-border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.navBundle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #010b14;
+  font-size: 2vw;
+  text-decoration: none;
+}
+
+.navbar {
+  font-family: "Martian";
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #22313b;
+  font-size: 3.8vh;
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 3vh;
+  padding-top: 2vh;
+  border-top: 0.15em solid;
+  border-bottom: 0.15em solid;
+  -o-border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+}
+
+.Link {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contentNavbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  font-family: "Martian";
+  background-color: #010b14;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.8vh;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.actualContent {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+}
+
+.contentSummary {
+  position: sticky;
+  top: 0;
+  width: 13vw;
+  border-right: 0.25em solid;
+  -o-border-image: linear-gradient(180deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(180deg, #005f73, #0a9396, #94d2bd) 1;
+  height: 98vh;
+  font-family: "Martian";
+  background-color: #010b14;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: left;
+  padding-left: 2vw;
+  padding-top: 2vw;
+  font-size: 1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.textContent {
+  border-top: 0.2em solid;
+  -o-border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(90deg, #005f73, #0a9396, #94d2bd) 1;
+  padding-top: 5vh;
+  padding-left: 15vw;
+  padding-right: 25vw;
+  width: 45vw;
+  overflow-wrap: break-word;
+  font-size: 1.2vw;
+  font-family: "Martian";
+  text-align: justify;
+  line-height: 2em;
+}
+
+h6 {
+  font-family: "Martian";
+  font-size: 2em;
+  margin-bottom: 3vh;
+  margin-top: 8vh;
+}
+
+h5 {
+  font-size: 1.5vw;
+  margin-bottom: 1vh;
+}
+
+h4 {
+  font-family: "Martian";
+  font-size: 1.5em;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.code {
+  color: inherit;
+  background-color: inherit;
+  font-family: "Ubuntu";
+  padding-top: 1em;
+  background-color: #22313b;
+  color: #ffffff;
+}
+
+table {
+  border-left: solid 0.2em #ffffff;
+  border-right: solid 0.2em #ffffff;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-collapse: collapse;
+  border-top: solid 0.2em #ffffff;
+  text-align: center;
+  color: #ffffff;
+}
+
+tr {
+  padding-bottom: 100em;
+  border-bottom: solid 0.2em;
+}
+
+td {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-right: solid 0.2em;
+}
+
+.legenda {
+  color: #0a9396;
+}
+
+.subcat {
+  color: #94d2bd;
+}
+
+.contentSummary ul {
+  margin-left: 0.5vw;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+ul li {
+  margin-bottom: 0.5vh;
+  font-size: 1vw;
+  padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 2vh;
+}
+
+ol {
+  border-right: 0.25em solid;
+  -o-border-image: linear-gradient(180deg, #005f73, #0a9396, #94d2bd) 1;
+     border-image: linear-gradient(180deg, #005f73, #0a9396, #94d2bd) 1;
+  padding-right: 3vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.actualLink {
+  text-decoration: underline;
+  color: #ee9b00;
+}/*# sourceMappingURL=dark.css.map */

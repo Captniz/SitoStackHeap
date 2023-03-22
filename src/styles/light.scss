@@ -45,6 +45,8 @@ html {
   display: none;
 }
 .body {
+  background-color: $whte;
+
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -53,6 +55,8 @@ html {
   display: none;
 }
 .body2 {
+  background-color: $whte;
+
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -228,6 +232,7 @@ html {
   border-left: 0.13em solid;
   border-image: linear-gradient(180deg, $blck, $blck, $blck, $whte) 1;
   text-align: justify;
+  line-height: 1.5em;
 }
 
 .MiniTitle {
@@ -467,5 +472,5 @@ a {
 
 .actualLink {
   text-decoration: underline;
-  color: $yllw;
+  color: $teal;
 }

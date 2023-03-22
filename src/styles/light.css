@@ -26,6 +26,7 @@ html {
 }
 
 .body {
+  background-color: #ffffff;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -35,6 +36,7 @@ html {
 }
 
 .body2 {
+  background-color: #ffffff;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -209,6 +211,7 @@ html {
   -o-border-image: linear-gradient(180deg, #010b14, #010b14, #010b14, #ffffff) 1;
      border-image: linear-gradient(180deg, #010b14, #010b14, #010b14, #ffffff) 1;
   text-align: justify;
+  line-height: 1.5em;
 }
 
 .MiniTitle {
@@ -446,5 +449,5 @@ a {
 
 .actualLink {
   text-decoration: underline;
-  color: #ee9b00;
+  color: #0a9396;
 }/*# sourceMappingURL=light.css.map */
