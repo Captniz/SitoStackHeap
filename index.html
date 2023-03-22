@@ -11,17 +11,26 @@
       type="image/icon type"
     />
     <!--CSS-->
-    <link rel="stylesheet" href="./src/styles/style.css" type="text/css" />
+    <link
+      id="csslink"
+      rel="stylesheet"
+      href="./src/styles/light.css"
+      type="text/css"
+    />
     <link
       href="./src/fonts/fontawesome-free-6.3.0-web/css/all.css"
       rel="stylesheet"
     />
     <!--SCRIPTS (JQuery, Script, ...)-->
-    <script src="myscripts.js"></script>
+    <script src="./src/scripts/script.js"></script>
+    <script src="./src/scripts/jquery.js"></script>
   </head>
   <body class="body">
-    <!---TODO: usa js per cambiare icona e tema-->
-    <div class="ChThemeContainer"><div class="ChTheme"><i class="fa-regular fa-lightbulb"></i></div></div>
+    <div class="ChThemeContainer">
+      <div class="ChTheme" onclick="changeTheme()">
+        <i class="fa-regular fa-lightbulb"></i>
+      </div>
+    </div>
     <div class="Banner">
       <div class="Title">STACK & HEAP</div>
       <div class="Subtitle">
@@ -33,14 +42,14 @@
       </div>
     </div>
     <div class="Wrapper">
-      <div class="Buttons"><!---TODO: LINKS-->
-        <a>
+      <div class="Buttons">
+        <a href="./src/html/stack.html">
           <div class="bigButtons">
             <div class="upper"><i class="fa-solid fa-layer-group"></i></div>
             <div class="lower">Stack</div>
           </div>
         </a>
-        <a>
+        <a href="./src/html/heap.html">
           <div class="bigButtons">
             <div class="upper"><i class="fa-solid fa-cubes-stacked"></i></div>
             <div class="lower">Heap</div>
@@ -50,11 +59,20 @@
       <div class="Description">
         <div class="Txt-container">
           <h3 class="MiniTitle">Descrizione del sito</h3>
-          <br>
-        TODO: METTI QUALCOSA DI RILEVANTE <span class="hightlight">fabsfhjafhvakfnosafiohasfhsauohfh uahsfohauh uashfu haushf uhasu hu ahsfuh asuh has hasu hafush uahs fuas gyasg </span> fyasg yufgaysg yg ygasy gfagsy fgasyg yasgf asygf ygasyofg aysgf yasgf yiasgyif gasyifg yasgfy iogasyg asyg fasygf ioyasgfy gasyfg asyiogf ysag fyasgy ofvafjvbkjkbhjvh
+          <br />
+          TODO: METTI QUALCOSA DI RILEVANTE
+          <span class="hightlight"
+            >fabsfhjafhvakfnosafiohasfhsauohfh uahsfohauh uashfu haushf uhasu hu
+            ahsfuh asuh has hasu hafush uahs fuas gyasg
+          </span>
+          fyasg yufgaysg yg ygasy gfagsy fgasyg yasgf asygf ygasyofg aysgf yasgf
+          yiasgyif gasyifg yasgfy iogasyg asyg fasygf ioyasgfy gasyfg asyiogf
+          ysag fyasgy ofvafjvbkjkbhjvh
         </div>
       </div>
-      <div class="Footer"> sdahfiahfoiahiho TODO: METTI QUALCOSA DI RILEVANTE</div>
+      <div class="Footer">
+        sdahfiahfoiahiho TODO: METTI QUALCOSA DI RILEVANTE
+      </div>
     </div>
   </body>
 </html>

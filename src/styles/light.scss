@@ -1,0 +1,398 @@
+$blck: #010b14;
+$lblc: #22313b;
+$whte: #ffffff;
+$dwht: #efefef;
+$grey: #ebebeb;
+$dgre: #a8a8a8;
+$dblu: #005f73;
+$teal: #0a9396;
+$lblu: #94d2bd;
+$sand: #e9d8a6;
+
+$yllw: #ee9b00;
+$lorg: #ca6702;
+$dorg: #bb3e03;
+$lred: #ae2012;
+$dred: #9b2226;
+
+@font-face {
+  font-family: "Martian";
+  src: url("../fonts/Martian_Mono/MartianMono-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Chivo";
+  src: url("../fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+.body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.body2::-webkit-scrollbar {
+  display: none;
+}
+.body2 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.Banner {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChThemeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.ChTheme {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  position: fixed;
+  top: 0;
+  background-color: $blck;
+  color: $whte;
+  width: 5vw;
+  height: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+}
+
+.ChTheme i {
+  font-size: 2vw;
+  padding-left: 10px;
+}
+
+.Title {
+  font-family: "Martian";
+  font-weight: bold;
+  color: $blck;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  font-size: 8vw;
+  background: linear-gradient(180deg, $lred, $lorg, $yllw, $whte);
+  border-right: 0.04em solid;
+  border-image: linear-gradient(180deg, $blck, $blck, $blck, $whte) 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.Subtitle {
+  height: 100%;
+  font-family: "Martian";
+  font-size: 4vw;
+  color: $blck;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  padding-left: 5vw;
+}
+
+.Buttons {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20vh;
+  padding-top: 15vh;
+}
+
+.bigButtons {
+  border-radius: 20px;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  width: 30vw;
+  height: 30vw;
+  background-image: linear-gradient(180deg, $lred, $lorg, $yllw, $whte);
+  color: $whte;
+  border: 0.15em solid $lblc;
+  font-size: 2vw;
+  font-weight: bold;
+  box-shadow: 0px 0.4em $blck;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover {
+    box-shadow: 0px 0.4em $yllw;
+    color: $blck;
+    border: 0.15em solid $blck;
+    border-radius: 20px;
+    border: 0.15em double transparent;
+    background-image: linear-gradient(white, white),
+      linear-gradient(180deg, $lred, $lorg, $yllw);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    //TODO: scroll icon come casari
+  }
+}
+
+.bigButtons .upper {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  color: inherit;
+  background-color: inherit;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigButtons .lower {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  font-family: "Chivo";
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background-color: $grey;
+  justify-content: center;
+  align-items: center;
+  color: $blck;
+}
+
+.bigButtons div i {
+  font-size: 10vw;
+}
+
+.Subtitle div i {
+  font-size: 5vw;
+  width: 1px;
+}
+
+.Description {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $whte;
+  color: $blck;
+  font-family: "Chivo";
+  font-size: 2vw;
+  padding-top: 5vh;
+  padding-bottom: 50vh;
+}
+
+.Txt-container {
+  font-family: "Chivo";
+  width: 80vw;
+  height: 100%;
+  align-items: start;
+  overflow-wrap: break-word;
+  padding-left: 5vw;
+  border-left: 0.13em solid;
+  border-image: linear-gradient(180deg, $blck, $blck, $blck, $whte) 1;
+}
+
+.MiniTitle {
+  font-family: "Martian";
+  font-size: 3vw;
+  margin-bottom: 2vh;
+}
+
+.Footer {
+  font-family: "Ubuntu";
+  background-color: $blck;
+  color: $whte;
+  width: 100%;
+  max-width: 100%;
+  height: 15vh;
+}
+
+.hightlight {
+  border-bottom: 0.1em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+  text-decoration: none;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    $dwht,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.hightlight1 {
+  border-bottom: 0.11em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+  transition: all 0.05s ease;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 0.11em solid;
+    border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+// CONTENT PAGES ++++++++++++++++
+
+.navBundle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #73001d;
+  color: $blck;
+  font-size: 2vw;
+  text-decoration: none;
+}
+
+.navbar {
+  font-family: "Martian";
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $whte;
+  font-size: 3.8vh;
+  color: $blck;
+  text-decoration: none;
+  padding-bottom: 3vh;
+  padding-top: 2vh;
+  border-top: 0.15em solid;
+  border-bottom: 0.15em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+}
+
+.Link {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  color: $blck;
+  text-decoration: none;
+}
+
+.contentNavbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  font-family: "Martian";
+  background-color: $blck;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.8vh;
+  color: $whte;
+  text-decoration: none;
+}
+
+.actualContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentSummary {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 13vw;
+  border-right: 0.25em solid;
+  border-image: linear-gradient(180deg, $lred, $lorg, $yllw) 1;
+  height: 98vh;
+  font-family: "Martian";
+  background-color: $blck;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: left;
+  padding-left: 2vw;
+  padding-top: 2vw;
+  font-size: 1em;
+  color: $whte;
+  text-decoration: none;
+}
+
+.textContent {
+  border-top: 0.2em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+  padding-top: 5vh;
+  padding-left: 15vw;
+  padding-right: 25vw;
+  width: 45vw;
+  overflow-wrap: break-word;
+  font-size: 1em;
+  font-family: "Martian";
+}
+
+h6 {
+  //main title
+  font-family: "Martian";
+  font-size: 3em;
+}
+
+h5 {
+  //main summary arg
+  font-size: 2vw;
+  margin-bottom: 1vh;
+}
+
+h4 {
+  //special?
+}
+
+ul {
+  //subargs
+  margin-left: 0.5vw;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  //subargs
+  margin-bottom: 0.5vh;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

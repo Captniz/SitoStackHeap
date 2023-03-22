@@ -45,11 +45,17 @@ html {
   display: none;
 }
 .body {
-  overflow: auto;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
+.body2::-webkit-scrollbar {
+  display: none;
+}
+.body2 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .Banner {
   width: 100%;
   max-width: 100%;
@@ -60,7 +66,7 @@ html {
   align-items: center;
 }
 
-.ChThemeContainer{
+.ChThemeContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,7 +74,7 @@ html {
   align-items: end;
 }
 
-.ChTheme{
+.ChTheme {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   position: fixed;
@@ -82,6 +88,11 @@ html {
   justify-content: center;
   align-items: center;
   border-bottom-left-radius: 20px;
+}
+
+.ChTheme i {
+  font-size: 2vw;
+  padding-left: 10px;
 }
 
 .Title {
@@ -191,7 +202,7 @@ html {
   width: 1px;
 }
 
-.Description{
+.Description {
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -207,24 +218,24 @@ html {
 }
 
 .Txt-container {
-  font-family: 'Chivo';
+  font-family: "Chivo";
   width: 80vw;
   height: 100%;
   align-items: start;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   padding-left: 5vw;
   border-left: 0.13em solid;
   border-image: linear-gradient(180deg, $blck, $blck, $blck, $whte) 1;
 }
 
-.MiniTitle{
+.MiniTitle {
   font-family: "Martian";
   font-size: 3vw;
   margin-bottom: 2vh;
 }
 
-.Footer{
-  font-family: 'Ubuntu';
+.Footer {
+  font-family: "Ubuntu";
   background-color: $blck;
   color: $whte;
   width: 100%;
@@ -232,13 +243,156 @@ html {
   height: 15vh;
 }
 
-.hightlight{
+.hightlight {
   border-bottom: 0.1em solid;
   border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
-  background-image: linear-gradient(180deg, rgba(0,0,0,0), $dwht, rgba(0,0,0,0));  
+  text-decoration: none;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    $dwht,
+    rgba(0, 0, 0, 0)
+  );
 }
 
-.ChTheme i {
-  font-size: 4vh;
-  padding-left: 10px;
+.hightlight1 {
+  border-bottom: 0.11em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+  transition: all 0.05s ease;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 0.11em solid;
+    border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+// CONTENT PAGES ++++++++++++++++
+
+.navBundle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #73001d;
+  color: $blck;
+  font-size: 2vw;
+  text-decoration: none;
+}
+
+.navbar {
+  font-family: "Martian";
+  height: 6vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $whte;
+  font-size: 3.8vh;
+  color: $blck;
+  text-decoration: none;
+  padding-bottom: 3vh;
+  padding-top: 2vh;
+  border-top: 0.15em solid;
+  border-bottom: 0.15em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+}
+
+.Link {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  color: $blck;
+  text-decoration: none;
+}
+
+.contentNavbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  font-family: "Martian";
+  background-color: $blck;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.8vh;
+  color: $whte;
+  text-decoration: none;
+}
+
+.actualContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentSummary {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 13vw;
+  border-right: 0.25em solid;
+  border-image: linear-gradient(180deg, $lred, $lorg, $yllw) 1;
+  height: 98vh;
+  font-family: "Martian";
+  background-color: $blck;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: left;
+  padding-left: 2vw;
+  padding-top: 2vw;
+  font-size: 1em;
+  color: $whte;
+  text-decoration: none;
+}
+
+.textContent {
+  border-top: 0.2em solid;
+  border-image: linear-gradient(90deg, $lred, $lorg, $yllw) 1;
+  padding-top: 5vh;
+  padding-left: 15vw;
+  padding-right: 25vw;
+  width: 45vw;
+  overflow-wrap: break-word;
+  font-size: 1em;
+  font-family: "Martian";
+}
+
+h6 {
+  //main title
+  font-family: "Martian";
+  font-size: 3em;
+}
+
+h5 {
+  //main summary arg
+  font-size: 2vw;
+  margin-bottom: 1vh;
+}
+
+h4 {
+  //special?
+}
+
+ul {
+  //subargs
+  margin-left: 0.5vw;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  //subargs
+  margin-bottom: 0.5vh;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
