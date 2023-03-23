@@ -51,28 +51,28 @@
     </div>
     <div class="actualContent">
       <div class="contentSummary">
-        <h5>Description</h5>
+        <a href="#desc"><h5>Description</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> What and how</li>
+          <a href="#what"><li><i class="fa-solid fa-chevron-right"></i> What and how</li></a>
         </ul>
-        <h5>Example</h5>
+        <a href="#exam"><h5>Example</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Code</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Error</li>
+          <a href="#code"><li><i class="fa-solid fa-chevron-right"></i> Code</li></a>
+          <a href="#erro"><li><i class="fa-solid fa-chevron-right"></i> Error</li></a>
         </ul>
-        <h5>Summary</h5>
+        <a href="#summ"><h5>Summary</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Table</li>
+          <a href="#tabl"><li><i class="fa-solid fa-chevron-right"></i> Table</li></a>
         </ul>
-        <h5>Sources</h5>
+        <a href="#srcs"><h5>Sources</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Links</li>
+          <a href="#link"><li><i class="fa-solid fa-chevron-right"></i> Links</li></a>
         </ul>
         <a href="../info/stack.md" class="actualLink">Download Markdown </a>
       </div>
       <div class="textContent">
-        <h6>DESCRIPTION</h6>
-        <h4>WHAT AND HOW</h4>
+        <h6 id="desc">DESCRIPTION</h6>
+        <h4 id="what">WHAT AND HOW</h4>
         Stack Memory is the
         <span class="hightlight">Static Memory Allocation Scheme</span> where
         all the function calls, primitive data values specific to a method and
@@ -99,8 +99,8 @@
         <span class="hightlight">The size of the stack memory is fixed</span>
         and cannot grow or shrink once created.
 
-        <h6>EXAMPLE</h6>
-        <h4>CODE</h4>
+        <h6 id="exam">EXAMPLE</h6>
+        <h4 id="code">CODE</h4>
         <pre class="code">
           <code class="language-java">
           public class Main {
@@ -155,13 +155,13 @@
           </li>
         </ol>
         <br />
-        <h4>ERROR</h4>
+        <h4 id="erro">ERROR</h4>
         As mentioned earlier, stack memory is limited in size and cannot be
         enlarged or shrunk once created. Therefore, if we use all of the stack
         memory, there will be no space left for upcoming method calls, and we
         will get the <span class="hightlight">StackOverflowError</span>.
-        <h6>SUMMARY</h6>
-        <h4>TABLE</h4>
+        <h6 id="summ">SUMMARY</h6>
+        <h4 id="tabl">TABLE</h4>
         <table>
           <tr class="legenda">
             <td>Property</td>
@@ -219,8 +219,8 @@
             <td>From start to end</td>
           </tr>
         </table>
-        <h6>SOURCES</h6>
-        <h4>LINKS</h4>
+        <h6 id="srcs">SOURCES</h6>
+        <h4 id="link">LINKS</h4>
 
         <a
           href="https://www.azul.com/blog/what-is-java-heap-size/"

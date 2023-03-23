@@ -51,35 +51,35 @@
     </div>
     <div class="actualContent">
       <div class="contentSummary">
-        <h5>Description</h5>
+        <h5><a href="#desc">Description</a></h5>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> What and how</li>
+          <a href="#what"><li><i class="fa-solid fa-chevron-right"></i> What and how</li></a>
         </ul>
-        <h5>Size</h5>
+        <h5><a href="#size">Size</a></h5>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Large size</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Small size</li>
+          <a href="#larg"><li><i class="fa-solid fa-chevron-right"></i> Large size</li></a>
+          <a href="#smal"><li><i class="fa-solid fa-chevron-right"></i> Small size</li></a>
         </ul>
-        <h5>Composition</h5>
+        <h5><a href="#comp">Composition</a></h5>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Description</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Eden</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Survivors</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Old generation</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Permanent generation</li>
+          <a href="#cmds"><li><i class="fa-solid fa-chevron-right"></i> Description</li></a>
+          <a href="#"><li><i class="fa-solid fa-chevron-right"></i> Eden</li></a>
+          <a href="#surv"><li><i class="fa-solid fa-chevron-right"></i> Survivors</li></a>
+          <a href="#old"><li><i class="fa-solid fa-chevron-right"></i> Old generation</li></a>
+          <a href="#perm"><li><i class="fa-solid fa-chevron-right"></i> Permanent generation</li></a>
         </ul>
-        <h5>Example</h5>
+        <a href="#exam"><h5>Example</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Code</li>
-          <li><i class="fa-solid fa-chevron-right"></i> Error</li>
+          <a href="#erro"><li><i class="fa-solid fa-chevron-right"></i> Error</li></a>
+          <a href="#code"><li><i class="fa-solid fa-chevron-right"></i> Code</li></a>
         </ul>
-        <h5>Summary</h5>
+        <a href="#summ"><h5>Summary</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> Table</li>
+          <a href="#tabl"><li><i class="fa-solid fa-chevron-right"></i> Table</li></a>
         </ul>
-        <h5>Sources</h5>
+        <a href="#srcs"><h5>Sources</h5></a>
         <ul>
-          <li><i class="fa-solid fa-chevron-right"></i> links</li>
+          <a href="#link"><li><i class="fa-solid fa-chevron-right"></i> links</li></a>
         </ul>
         <a
           href="../info/heap.md"
@@ -88,8 +88,8 @@
           </a>
       </div>
       <div class="textContent">
-        <h6>DESCRIPTION</h6>
-        <h4>WHAT AND HOW</h4>
+        <h6 id="desc">DESCRIPTION</h6>
+        <h4 id="what">WHAT AND HOW</h4>
 
         The <span class="hightlight">Java heap</span> is the area of memory used
         to store dynamic objects instantiated by applications running on the
@@ -107,8 +107,8 @@
           >Heap does not follow any order and dynamically manages memory
           blocks.</span
         >
-        <h6>SIZE</h6>
-        <h4>LARGE SIZE</h4>
+        <h6 id="size">SIZE</h6>
+        <h4 id="larg">LARGE SIZE</h4>
         A larger Java memory heap:
         <br />
         <br />
@@ -125,7 +125,7 @@
           </li>
         </ol>
         <br />
-        <h4>SMALL SIZE</h4>
+        <h4 id="smal">SMALL SIZE</h4>
         A smaller Java memory heap:
         <br />
         <br />
@@ -137,8 +137,8 @@
           </li>
           <li>May lead to out-of-memory errors</li>
         </ol>
-        <h6>COMPOSITION</h6>
-        <h4>DESCRIPTION</h4>
+        <h6 id="comp">COMPOSITION</h6>
+        <h4 id="cmds">DESCRIPTION</h4>
         The heap memory can be divided into three parts:
         <br />
         <br />
@@ -158,14 +158,14 @@
           <li>Survivor2</li>
         </ol>
         <br />
-        <h4>EDEN</h4>
+        <h4 id="eden">EDEN</h4>
         <span class="hightlight"
           >All the newly created objects are allocated in Eden space</span
         >. When the Eden is full, a minor garbage collection happens, and the
         live objects are moved to Survivor1 and then to Survivor2.
         <br />
         <br />
-        <h4>SURVIVORS</h4>
+        <h4 id="surv">SURVIVORS</h4>
         <span class="hightlight"
           >The Survivor1 and Survivor2 contains objects that survived the minor
           garbage collection</span
@@ -175,7 +175,7 @@
         survived objects are moved to tenured generation.
         <br />
         <br />
-        <h4>OLD GENERATION</h4>
+        <h4 id="old">OLD GENERATION</h4>
         Age is set for the objects allocated in young generation.
         <span class="hightlight"
           >When that age is met, those live objects are moved to the old
@@ -185,13 +185,13 @@
         objects.
         <br />
         <br />
-        <h4>PERMANENT GENERATION</h4>
+        <h4 id="perm">PERMANENT GENERATION</h4>
         <span class="hightlight"
           >All the newly created objects are allocated in Eden space</span
         >. When the Eden is full, a minor garbage collection happens, and the
         live objects are moved to Survivor1 and then to Survivor2.
-        <h6>EXAMPLE</h6>
-        <h4>CODE</h4>
+        <h6 id="exam">EXAMPLE</h6>
+        <h4 id="code">CODE</h4>
         <pre class="code">
           <code class="language-java">
           import java.util.ArrayList;
@@ -215,10 +215,10 @@
         In the above example, the variable x is allocated in the stack, whereas the object list is allocated memory in the heap. Only the reference to the list object is stored in the stack memory alongside x.
         <br />
         <br />
-        <h4>ERROR</h4>
+        <h4 id="erro">ERROR</h4>
         <span class="hightlight">OutOfMemoryError</span> is thrown when there is no more space left in the heap to create and store a new object. This happens when the Garbage Collector could not freeup any space to store new objects.
-        <h6>SUMMARY</h6>
-        <h4>TABLE</h4>
+        <h6 id="summ">SUMMARY</h6>
+        <h4 id="tabl">TABLE</h4>
         <table>
           <tr class="legenda">
             <td >Property</td>
@@ -276,8 +276,8 @@
             <td>From start to end</td>
           </tr>
         </table>
-        <h6>SOURCES</h6>
-        <h4>LINKS</h4>
+        <h6 id="srcs">SOURCES</h6>
+        <h4 id="link">LINKS</h4>
 
         <a
           href="https://www.azul.com/blog/what-is-java-heap-size/"
