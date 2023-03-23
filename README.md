@@ -6,5 +6,3 @@ Sito per scuola su stack e heap.
 - TODO: chtheme on startup
 - TODO: return to home dalla navbar laterrale
 - TODO: scroll icon come casari
-
-TODO!: NON SALVARE SCSS, PORTA IL CSS a SCSS e poi fallo
